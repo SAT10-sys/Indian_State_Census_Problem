@@ -13,7 +13,7 @@ namespace Indian_State_Census_Problem
         Dictionary<string, CensusDTO> censusDataMap;
         public Dictionary<string, CensusDTO> LoadCensusData(string csvPath, Country country, string csvHeader)
         {
-            CheckFileException.CheckExceptions(csvPath, country);
+            CheckFileException.CheckExceptions(csvPath);
             censusDataMap = new CensusDataDictionary().LoadDictionary(csvPath, country, csvHeader);
             return censusDataMap;
         }
